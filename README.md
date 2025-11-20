@@ -1,95 +1,52 @@
-This is an unofficial, community-maintained fork of paularmstrong/swig, aiming to provide Node.js 18+ compatibility, security fixes, and TypeScript support while preserving Swig’s original template syntax.
-NOT MAINTAINED
-====
+# Swig-Next  
 
-Fork and use at your own risk.
+This is an **unofficial, community-maintained fork** of [paularmstrong/swig](https://github.com/paularmstrong/swig). Our goal is to keep Swig’s original template syntax while bringing it up to date with the modern Node.js ecosystem. This fork provides:  
 
+- Compatibility with **Node.js 18 and higher**  
+- Security updates and dependency maintenance  
+- **TypeScript** type definitions  
+- Drop-in replacement for projects still using Swig v1  
 
-Swig [![Build Status](http://img.shields.io/travis/paularmstrong/swig/master.svg?style=flat)](http://travis-ci.org/paularmstrong/swig) [![Dependency Status](http://img.shields.io/gemnasium/paularmstrong/swig.svg?style=flat)](https://gemnasium.com/paularmstrong/swig) [![NPM version](http://img.shields.io/npm/v/swig.svg?style=flat)](https://www.npmjs.org/package/swig) [![NPM Downloads](http://img.shields.io/npm/dm/swig.svg?style=flat)](https://www.npmjs.org/package/swig)
-====
+## Features  
 
-[Swig](http://paularmstrong.github.io/swig/) is an awesome, Django/Jinja-like template engine for node.js.
+Swig-Next retains all of the original Swig features:  
 
-Features
---------
+- Available for Node.js and major web browsers  
+- Express compatible  
+- Object-oriented template inheritance  
+- Filters and transformations within your templates  
+- Automatic output escaping for safe HTML rendering  
+- Flexible iteration and conditionals  
+- Compact and robust core  
+- Easily extended and customizable – see [Swig-Extras](https://github.com/paularmstrong/swig-extras) for examples  
 
-* Available for node.js **and** major web browsers!
-* [Express](http://expressjs.com/) compatible.
-* Object-Oriented template inheritance.
-* Apply filters and transformations to output in your templates.
-* Automatically escapes all output for safe HTML rendering.
-* Lots of iteration and conditionals supported.
-* Robust without the bloat.
-* Extendable and customizable. See [Swig-Extras](https://github.com/paularmstrong/swig-extras) for some examples.
-* Great [code coverage](http://paularmstrong.github.io/swig/coverage.html).
+## Installation  
 
-Need Help? Have Questions? Comments?
-------------------------------------
+Use npm to install the maintained version of Swig:  
 
-* [Mailing List/Google Group](http://groups.google.com/forum/#!forum/swig-templates)
-* [StackOverflow](http://stackoverflow.com/questions/tagged/swig-template)
-* [Migration Guide](https://github.com/paularmstrong/swig/wiki/Migrating-from-v0.x.x-to-v1.0.0)
+```bash  
+npm install swig-modern  
+```  
 
-Installation
-------------
+Then require it in your project:  
 
-    npm install swig
+```js  
+const swig = require('swig-modern');  
+// use swig.compile, swig.renderFile, etc.  
+```  
 
-Documentation
--------------
+## Migrating from `swig`  
 
-All documentation can be viewed online on the [Swig Website](http://paularmstrong.github.io/swig/).
+To migrate from the original `swig` package:  
 
-Basic Example
--------------
+1. Replace `swig` in your `package.json` dependencies with `swig-modern`.  
+2. Update your imports/`require` calls to use `swig-modern`.  
+3. Run your test suite to ensure compatibility.  
 
-### Template code
+## Documentation  
 
-```html
-<h1>{{ pagename|title }}</h1>
-<ul>
-{% for author in authors %}
-    <li{% if loop.first %} class="first"{% endif %}>{{ author }}</li>
-{% endfor %}
-</ul>
-```
+The original Swig documentation is still relevant and can be found on the [Swig Website](http://paularmstrong.github.io/swig/). We aim to maintain API compatibility, so existing guides should apply.  
 
-### node.js code
+## Contributing  
 
-```js
-var swig  = require('swig');
-var template = swig.compileFile('/absolute/path/to/template.html');
-var output = template({
-    pagename: 'awesome people',
-    authors: ['Paul', 'Jim', 'Jane']
-});
-```
-
-### Output
-
-```html
-<h1>Awesome People</h1>
-<ul>
-    <li class="first">Paul</li>
-    <li>Jim</li>
-    <li>Jane</li>
-</ul>
-```
-
-For working example see [examples/basic](https://github.com/paularmstrong/swig/tree/master/examples/basic)
-
-How it works
-------------
-
-Swig reads template files and translates them into cached javascript functions. When we later render a template we call the evaluated function, passing a context object as an argument.
-
-License
--------
-
-Copyright (c) 2010-2013 Paul Armstrong
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+We welcome contributions! Please open an issue or submit a pull request if you have fixes, improvements or questions. This fork is community maintained; help keep Swig alive for projects that still depend on it.
