@@ -1,3 +1,4 @@
+This is an unofficial, community-maintained fork of paularmstrong/swig, aiming to provide Node.js 18+ compatibility, security fixes, and TypeScript support while preserving Swig’s original template syntax.
 NOT MAINTAINED
 ====
 
