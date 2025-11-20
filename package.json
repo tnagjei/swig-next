@@ -1,7 +1,7 @@
 {
-  "name": "swig",
-  "version": "1.4.2",
-  "description": "A simple, powerful, and extendable templating engine for node.js and browsers, similar to Django, Jinja2, and Twig.",
+  "name": "swig-modern",
+  "version": "1.5.0",
+  "description": "A simple, powerful, and extendable templating engine for node.js and browsers, similar to Django, Jinja2, and Twig. This is an unofficial maintained fork providing Node.js 18+ compatibility, security fixes, and TypeScript support.",
   "keywords": [
     "template",
     "templating",
@@ -14,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/paularmstrong/swig.git"
+    "url": "https://github.com/tnagjei/swig-next.git"
   },
   "author": "Paul Armstrong <paul@paularmstrongdesigns.com>",
   "dependencies": {
@@ -40,7 +40,7 @@
   "license": "MIT",
   "main": "index",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=14"
   },
   "bin": {
     "swig": "./bin/swig.js"
@@ -58,6 +58,7 @@
     }
   },
   "bugs": {
-    "url": "https://github.com/paularmstrong/swig/issues"
-  }
+    "url": "https://github.com/tnagjei/swig-next/issues"
+  },
+  "homepage": "https://github.com/tnagjei/swig-next#readme"
 }
