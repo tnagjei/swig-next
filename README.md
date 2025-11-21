@@ -50,3 +50,6 @@ The original Swig documentation is still relevant and can be found on the [Swig 
 ## Contributing  
 
 We welcome contributions! Please open an issue or submit a pull request if you have fixes, improvements or questions. This fork is community maintained; help keep Swig alive for projects that still depend on it.
+
+## Project Homepage  
+For documentation and updates, visit [lovart.info](https://lovart.info/).
